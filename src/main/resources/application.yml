@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: tvmaze-api
+  data:
+    mongodb:
+      # La URI de conexion se toma de la variable de entorno MONGODB_URI.
+      # Si no esta definida, se usa una instancia local de MongoDB por defecto.
+      uri: ${MONGODB_URI:mongodb+srv://jacisnerosp94_db_user:DJkDWJHGB0XSF7rr@cluster0.1gnfd68.mongodb.net/tvmazedb?appName=Cluster0}
+
+logging:
+  level:
+    org.springframework.web: INFO
+    com.tvmaze.api: DEBUG
